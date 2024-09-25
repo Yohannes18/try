@@ -1,0 +1,495 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+    background-image: linear-gradient(to bottom, rgb(33, 0, 77), #354d8f);
+}
+
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+img{
+    width: 100%;
+    display: flex;
+}
+
+a{
+    text-decoration: none;
+}
+
+
+nav{
+    max-width: 1200px;
+    margin: auto;
+    padding: 1rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.nav-logo{
+    max-width: 125px;
+}
+
+.nav-links{
+    list-style: none;
+    align-items: center;
+    display: flex;
+    gap: 3rem;
+}
+
+.links a{
+    position: relative;
+    padding-bottom: 0.75rem;
+    color: #ccc;
+}
+
+.links a:hover{
+    color: #354d8f;
+    font-size: 2rem;
+}
+
+.links a::after{
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    bottom: 0;
+    left: 0;
+    background-color: #b197f7;
+    transition: all 0.3s ease-in-out;
+}
+
+.links a:hover::after{
+    width: 4rem;
+}
+
+.btn{
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #1d4ed8;
+    border: 1px solid #1d4ed8;;
+    border-radius: 5pc;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.btn-1{
+    padding: 1rem 1rem;
+    font-size: 0.89rem;
+    color: #fdfafa;
+    background-color: #1d4ed8;
+    border-radius: 4.5pc;
+    border: 1px solid #1d4ed8;
+    cursor: pointer;
+    transition: all 0.29s ease-out;
+}
+
+.btn-1:hover{
+    background-color: #133194;
+    color: #ffffff;
+}
+
+.btn:hover{
+    background-color: #133194;
+}
+
+.container{
+    max-width: 1200px;
+    margin: auto;
+    padding: 5rem 2rem;
+}
+
+.blur{
+    position: absolute;
+    box-shadow: 0 0 1000px 50px #1d4ed8;
+    z-index: -100;
+}
+
+header{
+    position: relative;
+    padding-top: 1rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    gap: 2rem;
+}
+
+header .content h4{
+    margin-bottom: 1rem;
+    color: #ccc;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+header .content h4:hover{
+    color: #fff;
+}
+
+header .content h1{
+    color: #fff;
+    margin-bottom: 1rem;
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 4rem;
+}
+
+header .content span{
+    -webkit-text-fill-color: transparent;
+    -webkit-text-stroke: 1px #fff;
+}
+
+header .content span:hover{
+    -webkit-text-fill-color: snow;
+    -webkit-text-stroke: 1px #fff;
+    cursor: pointer;
+}
+
+header .content p{
+    color: aliceblue;
+    margin-bottom: 2rem;
+}
+
+header .content image{
+    position: relative;
+}
+
+header .image img{
+    max-width: 650px;
+   
+}
+
+section .header{
+    margin-bottom: 1rem;
+    color: #fff;
+    text-align: center;
+    font-size: 2.25rem;
+    font-weight: 600;
+}
+
+.features{
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.features .card{
+    background-color: #27272a;
+    padding: 1rem;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.features .card:hover{
+    background-color: #323232;
+    border-color: #fff;
+}
+
+.features .card span{
+    display: inline-block;
+    background-color: #043eff;
+    padding: 2px 9px;
+    margin-bottom: 1rem;
+    font-size: 1.75rem;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.features .card h4{
+    margin-bottom: 0.5rem;
+    color: #fff;
+    font-size: 1.2 rem;
+    font-weight: 600;
+}
+
+.features .card p{
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.features .card a{
+    color: #fff;
+    transition: all 0.3s ease;
+}
+
+.features .card a:hover{
+    color: #023fe7;
+}
+
+.sub-header{
+    max-width: 600px;
+    margin: auto;
+    text-align: center;
+    color: #ffff;
+}
+
+.pricing{
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.pricing .card{
+    padding: 3rem 2rem;
+    background-color: #27272a;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.pricing .card:hover{
+    background-color: #3e3d49;
+    border-color: #cae3e9;
+}
+
+.pricing .card .content{
+    flex: 1;
+    margin-bottom: 2rem;
+}
+
+.pricing .card h4{
+    margin-bottom: 1rem;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.pricing .card h3{
+    color: #fff;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-weight: 600;
+    border-bottom: 2px dashed #fff;
+}
+
+.pricing .card p{
+    color: #fff;
+    margin-bottom: 0.75rem;
+}
+
+.pricing .card p i{
+    color: #ccc;
+    font-size: 1.2rem;
+    margin-right: 0.3rem;
+}
+
+.pricing .card button{
+    padding: 1rem 2rem;
+    margin-top: 1.5rem;
+    color: #fff;
+    background-color: transparent;
+    border-radius: 5pc;
+    border: 2px solid #fff;
+}
+
+.pricing .content img{
+    opacity: 0.5;
+    transform: scale(1);
+    transition: all 0.5s ease-in-out;
+}
+
+.pricing .content img:hover{
+    opacity: 1.2;
+    transform: scale(1.5);
+}
+
+.pricing .card button a{
+    color: #ffffff;
+}
+
+.pricing .card button:hover{
+    background-color: #1e40af;
+    border-color: #1e40af;
+}
+
+/* Footer container */
+footer.container {
+    position: relative;
+    background-color: #2f3c60;
+    padding: 2rem;
+    color: #ccc;
+}
+
+/* Footer content layout using Flexbox */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 2rem;
+}
+
+/* Column-specific styles */
+.logo-column {
+    flex: 1;
+}
+
+.social-column {
+    flex: 1;
+    text-align: right;
+}
+
+footer .logo {
+    max-width: 100px;
+    margin-bottom: 1rem;
+}
+
+footer p {
+    color: #ccc;
+    line-height: 1.6;
+}
+
+/* Social icons styling */
+footer .socials a {
+    color: #ccc;
+    font-size: 1.5rem;
+    margin-left: 1rem;
+    transition: color 0.3s ease-in-out;
+}
+
+footer .socials a:hover {
+    color: #fff;
+}
+
+/* Individual hover colors for each social link */
+footer .socials .facebook:hover {
+    color: #4267B2;
+}
+
+footer .socials .instagram:hover {
+    color: #E1306C;
+}
+
+footer .socials .github:hover {
+    color: #333;
+}
+
+footer .socials .mail:hover {
+    color: #EA4335;
+}
+
+footer .socials .twitter:hover {
+    color: #1DA1F2;
+}
+
+/* Text in the social column */
+footer .column h4 {
+    color: #fff;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+/* Footer links */
+footer .column > a {
+    display: block;
+    color: #ccc;
+    margin-bottom: 1rem;
+    transition: color 0.3s ease;
+}
+
+footer .column > a:hover {
+    color: #1d4ed8;
+}
+
+/* Blur effect spans */
+footer .blur {
+    position: absolute;
+    box-shadow: 0 0 1000px 50px #1d4ed8;
+    z-index: -100;
+}
+
+.copyright{
+    max-width: 1200px;
+    margin: auto;
+    padding: 1rem;
+    color: #fff;
+    font-size: 0.8rem;
+    text-align: center;
+    align-items: baseline;
+}
+
+
+@media (width < 900px){
+    .nav-links{
+        display: none;
+    }
+    header{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    header .image{
+        grid-area: 1/1/2/2;
+    }
+    .features{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .pricing{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    footer{
+        grid-template-columns: 1fr 200px;
+    }
+}
+
+@media (width < 600px){
+    header .image::before{
+        display: none;
+    }
+    .features{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .pricing{
+        grid-template-columns: repeat(1, 1fr);
+    }
+    footer{
+        grid-template-columns: 1fr 150px;
+    }
+}
+
+
+
+
+.wave {
+    animation-name: wave-animation;  
+    animation-duration: 2.5s;        
+    animation-iteration-count: infinite;  
+    transform-origin: 70% 70%;       
+    display: inline-block;
+  }
+  
+  @keyframes wave-animation {
+      0% { transform: rotate( 0.0deg) }
+     10% { transform: rotate(14.0deg) }  
+     20% { transform: rotate(-8.0deg) }
+     30% { transform: rotate(14.0deg) }
+     40% { transform: rotate(-4.0deg) }
+     50% { transform: rotate(10.0deg) }
+     60% { transform: rotate( 0.0deg) }  
+    100% { transform: rotate( 0.0deg) }
+  }
+
+
